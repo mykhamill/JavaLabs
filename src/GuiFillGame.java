@@ -19,7 +19,12 @@ public class GuiFillGame {
     
     //Main method to get it running
     public static void main(String[] args) {
-         GuiFillGame guiFillGame = new GuiFillGame();
+        SwingUtilities.invokeLater(new Runnable () {
+            @Override
+            public void run () {
+                new GuiFillGame();
+            }
+        });
     }
     
     //Base constructor
